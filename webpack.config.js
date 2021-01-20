@@ -30,11 +30,12 @@ module.exports = {
     ],
     
     
-    module:{ //配置第三方模块加载器
+  module:{ //配置第三方模块加载器
        rules: [ 
-           //定义匹配规则;调用规则,
-           { test: /\.css$/, use:['style-loader','css-loader']}
-
+           //定义匹配规则
+           { test: /\.css$/, use:['style-loader','css-loader']},
+           { test: /\.less$/, use:['style-loader','css-loader','less-loader']},
+           { test: /\.scss$/, use:['style-loader','css-loader','sass-loader']}
        ] 
     }
 };
