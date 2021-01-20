@@ -27,5 +27,14 @@ module.exports = {
             filename: 'index.html'
          })
 
-    ]
+    ],
+    
+    
+    module:{ //配置第三方模块加载器
+       rules: [ 
+           //定义匹配规则;调用规则,
+           { test: /\.css$/, use:['style-loader','css-loader']}
+
+       ] 
+    }
 };
