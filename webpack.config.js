@@ -35,7 +35,9 @@ module.exports = {
            //定义匹配规则
            { test: /\.css$/, use:['style-loader','css-loader']},
            { test: /\.less$/, use:['style-loader','css-loader','less-loader']},
-           { test: /\.scss$/, use:['style-loader','css-loader','sass-loader']}
+           { test: /\.scss$/, use:['style-loader','css-loader','sass-loader']},
+            //处理图片路径的loader
+           { test: /\.(jpg|jpeg|gif|bmp|png)$/, use:'url-loader'},
        ] 
     }
 };
