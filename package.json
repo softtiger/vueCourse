@@ -4,14 +4,20 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "bootstrap": "^4.5.3",
+    "bootstrap": "^4.6.0",
     "html-webpack-plugin": "^4.5.1",
     "jquery": "^3.5.1"
   },
- "devDependencies": {
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
     "@webpack-cli/init": "^1.1.1",
+    "babel-loader": "^8.2.2",
     "css-loader": "^5.0.1",
     "file-loader": "^6.2.0",
+    "jscodeshift": "^0.11.0",
     "less": "^4.1.0",
     "less-loader": "^7.2.1",
     "node-sass": "^5.0.0",
@@ -24,7 +30,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack serve"
+    "dev": "webpack serve --port 9080"
   },
   "keywords": [],
   "author": "",

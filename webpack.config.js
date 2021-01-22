@@ -20,8 +20,8 @@ module.exports = {
     },
 
     plugins:[
-         //ÅäÖÃ¸ù¾İ´ÅÅÌÉÏµÄÎÄ¼ş£¬Éú³ÉÄÚ´æÖĞµÄÎÄ¼ş
-         //ÕâÀïÊÇ¸ù¾İsrc/index.html Éú³ÉÄÚ´æÖĞµÄ index.html
+         //é…ç½®æ ¹æ®ç£ç›˜ä¸Šçš„æ–‡ä»¶ï¼Œç”Ÿæˆå†…å­˜ä¸­çš„æ–‡ä»¶
+         //è¿™é‡Œæ˜¯æ ¹æ®src/index.html ç”Ÿæˆå†…å­˜ä¸­çš„ index.html
          new htmlWebpackPlugin({
             template: path.join(__dirname,"./src/index.html"),
             filename: 'index.html'
@@ -30,14 +30,16 @@ module.exports = {
     ],
     
     
-  module:{ //ÅäÖÃµÚÈı·½Ä£¿é¼ÓÔØÆ÷
+  module:{ //é…ç½®ç¬¬ä¸‰æ–¹æ¨¡å—åŠ è½½å™¨
        rules: [ 
-           //¶¨ÒåÆ¥Åä¹æÔò
+           //å®šä¹‰åŒ¹é…è§„åˆ™
            { test: /\.css$/, use:['style-loader','css-loader']},
            { test: /\.less$/, use:['style-loader','css-loader','less-loader']},
            { test: /\.scss$/, use:['style-loader','css-loader','sass-loader']},
-            //´¦ÀíÍ¼Æ¬Â·¾¶µÄloader
+            //å¤„ç†å›¾ç‰‡è·¯å¾„çš„loader
            { test: /\.(jpg|jpeg|gif|bmp|png)$/, use:'url-loader'},
+            //é…ç½®babel å¤„ç†js, å¹¶æ’é™¤/node_modules/ ç›®å½•
+           { test: /\.js$/, use:'babel-loader',exclude: /node_modules/ }
        ] 
     }
 };
