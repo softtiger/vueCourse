@@ -4,6 +4,8 @@ const webpack = require("webpack")
 
 const htmlWebpackPlugin =  require("html-webpack-plugin")
 
+const vueLoaderPlugin = require('vue-loader/lib/plugin')
+
 module.exports = {
     mode: 'development',
     entry: './src/main.js',
