@@ -41,5 +41,10 @@ module.exports = {
             //配置babel 处理js, 并排除/node_modules/ 目录
            { test: /\.js$/, use:'babel-loader',exclude: /node_modules/ }
        ] 
-    }
+    },
+    resolve:{
+        alias:{
+       			"vue$": "vue/dist/vue.js"
+        }
+    	  }
 };
