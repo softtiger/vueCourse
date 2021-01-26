@@ -12,13 +12,6 @@ module.exports = {
             filename: 'bundle.js'
     },
     
-    devServer:{
-        open:true,
-        port:9090,
-        hot: true,
-        contentBase: 'src'
-    },
-
     plugins:[
          //配置根据磁盘上的文件，生成内存中的文件
          //这里是根据src/index.html 生成内存中的 index.html
