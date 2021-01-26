@@ -18,7 +18,8 @@ module.exports = {
          new htmlWebpackPlugin({
             template: path.join(__dirname,"./src/index.html"),
             filename: 'index.html'
-         })
+         }),
+          new vueLoaderPlugin()
 
     ],
     
@@ -32,7 +33,8 @@ module.exports = {
             //处理图片路径的loader
            { test: /\.(jpg|jpeg|gif|bmp|png)$/, use:'url-loader'},
             //配置babel 处理js, 并排除/node_modules/ 目录
-           { test: /\.js$/, use:'babel-loader',exclude: /node_modules/ }
+           { test: /\.js$/, use:'babel-loader',exclude: /node_modules/ },
+             { test: /\.vue$/, use:'vue-loader',exclude: /node_modules/ }
        ] 
     },
     resolve:{
