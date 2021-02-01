@@ -1,11 +1,14 @@
-import Vue  from  'vue'
+import Vue from 'vue'
+import App from './components/App.vue'
 
-import login from  './login.vue'
+import router from './components/router.js'
+
+import VueRouter from 'vue-router'
+
+Vue.use(VueRouter)
 
 var vm = new Vue({
-    el: '#app',
-    data: {
-        'greet': "hello world"
-    },
-    render: c => c(login)
+  el:"#app",
+  render: h => h(App),
+  router
 })
